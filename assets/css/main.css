@@ -365,18 +365,18 @@ nav a,
 }
 
 .project-info-title {
-	font-size: clamp(5rem, 15vw, 14rem);
+	font-size: clamp(3.5rem, 5vw, 6rem);
 	font-weight: 700;
 	letter-spacing: 0;
-	line-height: 0.82;
-	margin-bottom: 24px;
+	line-height: 0.9;
+	margin-bottom: 32px;
 	max-width: 95vw;
 }
 
 .project-info-panel p {
-	font-size: clamp(1.05rem, 1.45vw, 1.55rem);
+	font-size: clamp(1.05rem, 1.3vw, 1.55rem);
 	font-weight: 700;
-	line-height: 1.08;
+	line-height: 1.18;
 	max-width: 720px;
 }
 
