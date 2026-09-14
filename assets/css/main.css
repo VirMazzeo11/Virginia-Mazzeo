@@ -14,9 +14,9 @@
 	line-height: 1.5;
 	--type-small: clamp(12.9px, 1.29032258vw, 20px);
 	--type-medium: clamp(19.35px, 1.93548387vw, 30px);
-	--type-nav: clamp(17px, 1.7vw, 26.4px);
+	--type-nav: clamp(15.5px, 1.53vw, 24px);
 	--type-big: clamp(38.71px, 3.87096774vw, 60px);
-	--side-pad: clamp(10.32px, 1.52258065vw, 23.59px);
+	--side-pad: clamp(16px, 1.56vw, 32px);
 	--header-row: clamp(18.06px, 2.66387097vw, 41.29px);
 	--panel-bottom: clamp(24.09px, 3.5516129vw, 55.05px);
 	--title-pad-top: clamp(4.52px, 0.66580645vw, 10.32px);
@@ -38,7 +38,7 @@ a {
 	background: #fff;
 	display: flex;
 	justify-content: space-between;
-	padding: calc(var(--type-nav) * 1.5) var(--side-pad) 0;
+	padding: calc(var(--type-nav) * 1.5) var(--side-pad);
 	position: sticky;
 	top: 0;
 	z-index: 10;
