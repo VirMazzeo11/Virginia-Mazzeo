@@ -344,13 +344,14 @@ nav a,
 
 .project-info-panel {
 	background: #fff;
-	left: auto;
+	left: 50%;
 	margin: 0;
-	max-width: min(520px, calc(100vw - 32px));
-	padding: 0 16px 16px 0;
+	max-width: none;
+	padding: 0 16px 16px;
 	position: absolute;
 	right: auto;
-	width: min(520px, calc(100vw - 32px));
+	transform: translateX(-50%);
+	width: 100vw;
 	z-index: 2;
 }
 
