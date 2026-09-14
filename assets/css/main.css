@@ -14,6 +14,7 @@
 	line-height: 1.5;
 	--type-small: clamp(12.9px, 1.29032258vw, 20px);
 	--type-medium: clamp(19.35px, 1.93548387vw, 30px);
+	--type-nav: clamp(17px, 1.7vw, 26.4px);
 	--type-big: clamp(38.71px, 3.87096774vw, 60px);
 	--side-pad: clamp(10.32px, 1.52258065vw, 23.59px);
 	--header-row: clamp(18.06px, 2.66387097vw, 41.29px);
@@ -37,7 +38,7 @@ a {
 	background: #fff;
 	display: flex;
 	justify-content: space-between;
-	padding: 0 var(--side-pad);
+	padding: calc(var(--type-nav) * 1.5) var(--side-pad) 0;
 	position: sticky;
 	top: 0;
 	z-index: 10;
@@ -45,7 +46,7 @@ a {
 
 .site-name,
 nav {
-	font-size: var(--type-medium);
+	font-size: var(--type-nav);
 	font-weight: 700;
 	line-height: 1.5;
 }
@@ -173,7 +174,7 @@ main {
 	display: grid;
 	gap: 12px;
 	grid-template-columns: 1fr auto;
-	margin-bottom: var(--title-pad-bottom);
+	margin-bottom: clamp(18px, 2.1vw, 34px);
 	max-width: none;
 	width: 100%;
 }
@@ -287,6 +288,7 @@ main {
 
 .project-title {
 	justify-self: start;
+	font-size: calc(var(--type-small) * 0.92);
 	margin-right: 12px;
 }
 
@@ -375,7 +377,7 @@ nav a,
 }
 
 .project-info-title {
-	font-size: var(--type-big);
+	font-size: calc(var(--type-big) * 0.82);
 	font-weight: 700;
 	letter-spacing: 0;
 	line-height: 1.2;
