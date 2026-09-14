@@ -365,7 +365,9 @@ nav a,
 }
 
 .project-info-title {
+	font-size: clamp(3rem, 10vw, 8.5rem);
 	font-weight: 700;
+	line-height: 0.9;
 	margin-bottom: 8px;
 }
 
