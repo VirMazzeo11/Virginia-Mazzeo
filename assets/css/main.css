@@ -8,10 +8,18 @@
 	color: #000;
 	background: #fff;
 	font-family: Archivo, sans-serif;
-	font-size: 16px;
-	font-weight: 700;
-	letter-spacing: 0.03em;
-	line-height: 1.1;
+	font-size: clamp(12.9px, 1.29032258vw, 20px);
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.5;
+	--type-small: clamp(12.9px, 1.29032258vw, 20px);
+	--type-medium: clamp(19.35px, 1.93548387vw, 30px);
+	--type-big: clamp(38.71px, 3.87096774vw, 60px);
+	--side-pad: clamp(10.32px, 1.52258065vw, 23.59px);
+	--header-row: clamp(18.06px, 2.66387097vw, 41.29px);
+	--panel-bottom: clamp(24.09px, 3.5516129vw, 55.05px);
+	--title-pad-top: clamp(4.52px, 0.66580645vw, 10.32px);
+	--title-pad-bottom: clamp(12.04px, 1.77612903vw, 27.53px);
 }
 
 body {
@@ -29,7 +37,7 @@ a {
 	background: #fff;
 	display: flex;
 	justify-content: space-between;
-	padding: 14px 16px;
+	padding: 0 var(--side-pad);
 	position: sticky;
 	top: 0;
 	z-index: 10;
@@ -37,13 +45,14 @@ a {
 
 .site-name,
 nav {
-	font-size: inherit;
-	line-height: inherit;
+	font-size: var(--type-medium);
+	font-weight: 700;
+	line-height: 1.5;
 }
 
 nav {
 	display: flex;
-	gap: 18px;
+	gap: clamp(32px, 3.2vw, 50px);
 }
 
 nav a[aria-current="page"] {
@@ -52,7 +61,7 @@ nav a[aria-current="page"] {
 }
 
 main {
-	padding: 0 16px 16px;
+	padding: 0 var(--side-pad) var(--side-pad);
 }
 
 #servicios {
@@ -60,12 +69,12 @@ main {
 }
 
 #servicios-title {
-	margin-bottom: 24px;
+	margin-bottom: var(--title-pad-bottom);
 }
 
 .servicios-content {
 	display: grid;
-	gap: 18px;
+	gap: 1.5em;
 }
 
 .servicios-content p,
@@ -78,7 +87,8 @@ main {
 .servicios-block,
 .servicios-final,
 .servicios-line {
-	font-size: inherit;
+	font-size: var(--type-small);
+	font-weight: 400;
 	line-height: 1.5;
 }
 
@@ -102,7 +112,7 @@ main {
 
 .project-grid {
 	column-count: 3;
-	column-gap: 8px;
+	column-gap: var(--side-pad);
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -110,7 +120,7 @@ main {
 
 .project-grid li {
 	break-inside: avoid;
-	margin: 0 0 8px;
+	margin: 0 0 var(--side-pad);
 }
 
 .project-grid a,
@@ -131,11 +141,13 @@ main {
 	inset: 0;
 	justify-content: center;
 	opacity: 0;
-	padding: 16px;
+	font-size: var(--type-small);
+	font-weight: 400;
+	line-height: 1.5;
+	padding: var(--side-pad);
 	position: absolute;
 	text-align: center;
 	transition: none;
-	font-weight: 400;
 }
 
 .project-grid a:hover .project-hover-title,
@@ -148,7 +160,7 @@ main {
 }
 
 .project-page {
-	padding-top: 24px;
+	padding-top: var(--title-pad-top);
 }
 
 .project-detail {
@@ -161,7 +173,7 @@ main {
 	display: grid;
 	gap: 12px;
 	grid-template-columns: 1fr auto;
-	margin-bottom: 24px;
+	margin-bottom: var(--title-pad-bottom);
 	max-width: none;
 	width: 100%;
 }
@@ -169,9 +181,9 @@ main {
 .project-title,
 #servicios-title,
 #contacto-title {
-	font-size: inherit;
-	font-weight: inherit;
-	line-height: inherit;
+	font-size: var(--type-small);
+	font-weight: 700;
+	line-height: 1.5;
 	margin: 0;
 }
 
@@ -185,10 +197,7 @@ main {
 
 #servicios-title,
 #contacto-title {
-	font-size: inherit;
-	font-weight: inherit;
-	line-height: inherit;
-	margin: 0 0 24px;
+	margin: 0 0 var(--title-pad-bottom);
 }
 
 .contacto-content {
@@ -197,9 +206,9 @@ main {
 }
 
 .contacto-content p {
-	font-size: 0.85rem;
-	font-weight: 500;
-	line-height: 1.45;
+	font-size: var(--type-small);
+	font-weight: 400;
+	line-height: 1.5;
 	margin: 0;
 }
 
@@ -208,7 +217,7 @@ main {
 }
 
 .contacto-content p:nth-child(2) {
-	margin-bottom: 18px;
+	margin-bottom: 1.5em;
 }
 
 .contacto-content p:nth-child(3),
@@ -217,7 +226,7 @@ main {
 }
 
 .contacto-content p:nth-child(5) {
-	margin-top: 18px;
+	margin-top: 1.5em;
 }
 
 .contacto-content a {
@@ -228,14 +237,14 @@ main {
 
 .servicios-content {
 	display: grid;
-	gap: 18px;
+	gap: 1.5em;
 }
 
 .servicios-content p,
 .servicios-content h2 {
-	font-size: 0.85rem;
-	font-weight: 500;
-	line-height: 1.45;
+	font-size: var(--type-small);
+	font-weight: 400;
+	line-height: 1.5;
 	margin: 0;
 }
 
@@ -255,14 +264,14 @@ main {
 }
 
 .servicios-line {
-	font-weight: 700 !important;
-	letter-spacing: 0.02em;
+	font-weight: 700;
+	letter-spacing: 0;
 	margin: 0;
 	text-transform: uppercase;
 }
 
 .servicios-final {
-	font-weight: 500;
+	font-weight: 400;
 	margin: 0;
 }
 
@@ -273,7 +282,7 @@ main {
 }
 
 .servicios-cierre .servicios-final:last-child {
-	margin-top: 36px;
+	margin-top: 1.5em;
 }
 
 .project-title {
@@ -284,8 +293,7 @@ main {
 .project-info-toggle,
 .project-info-panel p,
 .project-info-title {
-	font: inherit;
-	letter-spacing: inherit;
+	letter-spacing: 0;
 }
 
 .project-info-toggle {
@@ -295,7 +303,9 @@ main {
 	cursor: pointer;
 	display: inline;
 	font: inherit;
-	letter-spacing: inherit;
+	font-size: var(--type-small);
+	font-weight: 700;
+	line-height: 1.5;
 	margin: 0 0 0 auto;
 	padding: 0;
 	text-transform: uppercase;
@@ -306,7 +316,7 @@ main {
 .project-info-icon {
 	display: inline;
 	font: inherit;
-	letter-spacing: inherit;
+	letter-spacing: 0;
 	line-height: inherit;
 	vertical-align: baseline;
 }
@@ -339,7 +349,7 @@ nav a,
 .project-gallery {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 8px;
+	gap: var(--side-pad);
 }
 
 .project-info-panel {
@@ -347,7 +357,7 @@ nav a,
 	left: 50%;
 	margin: 0;
 	max-width: none;
-	padding: 0 16px clamp(24px, 3.22580645vw, 50px);
+	padding: 0 var(--side-pad) var(--panel-bottom);
 	position: absolute;
 	right: auto;
 	transform: translateX(-50%);
@@ -365,16 +375,16 @@ nav a,
 }
 
 .project-info-title {
-	font-size: clamp(2.42rem, 3.87096774vw, 3.75rem);
+	font-size: var(--type-big);
 	font-weight: 700;
 	letter-spacing: 0;
 	line-height: 1.2;
-	margin-bottom: clamp(12px, 1.5483871vw, 24px);
+	margin-bottom: var(--title-pad-bottom);
 	max-width: 95vw;
 }
 
 .project-info-panel p {
-	font-size: clamp(0.806rem, 1.29032258vw, 1.25rem);
+	font-size: var(--type-small);
 	font-weight: 400;
 	line-height: 1.5;
 	max-width: 70vw;
