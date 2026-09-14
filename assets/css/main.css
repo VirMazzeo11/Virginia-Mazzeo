@@ -14,10 +14,6 @@
 	line-height: 1.1;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
 body {
 	background: #fff;
 	margin: 0;
@@ -36,7 +32,7 @@ a {
 	padding: 14px 16px;
 	position: sticky;
 	top: 0;
-	z-index: 1;
+	z-index: 10;
 }
 
 .site-name,
@@ -138,7 +134,7 @@ main {
 	padding: 16px;
 	position: absolute;
 	text-align: center;
-	transition: opacity 0.15s;
+	transition: none;
 	font-weight: 400;
 }
 
@@ -156,6 +152,7 @@ main {
 }
 
 .project-detail {
+	position: relative;
 	width: 100%;
 }
 
@@ -321,7 +318,7 @@ main {
 	margin-left: 0.1em;
 	transform: rotate(0deg);
 	transform-origin: center;
-	transition: transform 0.18s ease;
+	transition: none;
 	vertical-align: middle;
 }
 
@@ -346,9 +343,15 @@ nav a,
 }
 
 .project-info-panel {
-	margin-bottom: 24px;
-	max-width: 520px;
-	padding: 0;
+	background: #fff;
+	left: auto;
+	margin: 0;
+	max-width: min(520px, calc(100vw - 32px));
+	padding: 0 16px 16px 0;
+	position: absolute;
+	right: auto;
+	width: min(520px, calc(100vw - 32px));
+	z-index: 2;
 }
 
 .project-info-panel[hidden] {

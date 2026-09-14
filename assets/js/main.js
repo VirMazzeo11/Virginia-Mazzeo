@@ -44,11 +44,11 @@ function renderProject() {
 
 	const infoToggle = page.querySelector('.project-info-toggle');
 	const infoPanel = page.querySelector('.project-info-panel');
-	const infoIcon = page.querySelector('.project-info-icon');
 
 	const syncToggleState = () => {
 		const isOpen = infoToggle.getAttribute('aria-expanded') === 'true';
 		infoToggle.classList.toggle('is-open', isOpen);
+		infoPanel.toggleAttribute('hidden', !isOpen);
 	};
 
 	infoToggle.addEventListener('click', () => {
@@ -56,14 +56,6 @@ function renderProject() {
 		const nextState = !isOpen;
 		infoToggle.setAttribute('aria-expanded', String(nextState));
 		syncToggleState();
-
-		if (isOpen) {
-			infoPanel.setAttribute('hidden', '');
-			return;
-		}
-
-		infoPanel.removeAttribute('hidden');
-		infoPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 	});
 
 	syncToggleState();
